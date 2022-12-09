@@ -26,7 +26,7 @@ public class Mainframe extends javax.swing.JFrame {
         Iniciar = new javax.swing.JButton();
         Replay = new javax.swing.JButton();
         Load = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        ElDeseo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,16 +49,26 @@ public class Mainframe extends javax.swing.JFrame {
         jLabel4.setText("Comandos");
 
         Iniciar.setText("Iniciar");
+        Iniciar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IniciarMouseClicked(evt);
+            }
+        });
 
         Replay.setText("Replay");
 
         Load.setText("Store");
-
-        jButton1.setText("Conseguir Novia");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        Load.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                LoadMouseClicked(evt);
+            }
+        });
+
+        ElDeseo.setText("Conseguir Novia");
+        ElDeseo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ElDeseo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ElDeseoMouseClicked(evt);
             }
         });
 
@@ -91,7 +101,7 @@ public class Mainframe extends javax.swing.JFrame {
                         .addGap(59, 59, 59)
                         .addComponent(Load, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ElDeseo, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
@@ -113,7 +123,7 @@ public class Mainframe extends javax.swing.JFrame {
                     .addComponent(Iniciar)
                     .addComponent(Replay)
                     .addComponent(Load)
-                    .addComponent(jButton1))
+                    .addComponent(ElDeseo))
                 .addGap(27, 27, 27))
         );
 
@@ -131,9 +141,17 @@ public class Mainframe extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void ElDeseoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ElDeseoMouseClicked
         JOptionPane.showMessageDialog(this, "Si tan solo fuera tan simple");
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_ElDeseoMouseClicked
+
+    private void IniciarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IniciarMouseClicked
+        JOptionPane.showMessageDialog(this, "No xd");
+    }//GEN-LAST:event_IniciarMouseClicked
+
+    private void LoadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoadMouseClicked
+        JOptionPane.showMessageDialog(this, "deez nuts");
+    }//GEN-LAST:event_LoadMouseClicked
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -147,10 +165,10 @@ public class Mainframe extends javax.swing.JFrame {
     char [][] matriz = new char [13][33];
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFormattedTextField Comandos;
+    private javax.swing.JButton ElDeseo;
     private javax.swing.JButton Iniciar;
     private javax.swing.JButton Load;
     private javax.swing.JButton Replay;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
