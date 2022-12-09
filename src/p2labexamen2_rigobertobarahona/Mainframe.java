@@ -56,6 +56,11 @@ public class Mainframe extends javax.swing.JFrame {
         });
 
         Replay.setText("Replay");
+        Replay.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ReplayMouseClicked(evt);
+            }
+        });
 
         Load.setText("Store");
         Load.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -152,6 +157,10 @@ public class Mainframe extends javax.swing.JFrame {
     private void LoadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoadMouseClicked
         JOptionPane.showMessageDialog(this, "deez nuts");
     }//GEN-LAST:event_LoadMouseClicked
+
+    private void ReplayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReplayMouseClicked
+        JOptionPane.showMessageDialog(this, "Yo con progra 2 por pendejo (:");
+    }//GEN-LAST:event_ReplayMouseClicked
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
