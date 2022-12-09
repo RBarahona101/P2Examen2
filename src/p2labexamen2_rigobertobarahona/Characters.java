@@ -22,7 +22,7 @@ public class Characters {
 
     @Override
     public String toString() {
-        return banana;
+        return banana.toString() ;
     }
     
 }
