@@ -2,7 +2,8 @@ package p2labexamen2_rigobertobarahona;
 
 public class Banana {
     protected char caracter;
-
+    // Mejor suerte el siguiente periodo Nuila
+    
     public Banana() {
     }
 
