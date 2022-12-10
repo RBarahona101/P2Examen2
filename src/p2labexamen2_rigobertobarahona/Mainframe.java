@@ -43,6 +43,14 @@ public class Mainframe extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
+        jTextArea1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jTextArea1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jTextArea1MouseExited(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTextArea1);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -88,9 +96,9 @@ public class Mainframe extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Comandos, javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,6 +170,14 @@ public class Mainframe extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Yo con progra 2 por pendejo (:");
     }//GEN-LAST:event_ReplayMouseClicked
 
+    private void jTextArea1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea1MouseEntered
+        jTextArea1.setText("Boo");
+    }//GEN-LAST:event_jTextArea1MouseEntered
+
+    private void jTextArea1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea1MouseExited
+        jTextArea1.setText("");
+    }//GEN-LAST:event_jTextArea1MouseExited
+
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -172,6 +188,25 @@ public class Mainframe extends javax.swing.JFrame {
     ArrayList<Characters> juego = new ArrayList();
     ArrayList<Banana> serpiente = new ArrayList();
     char [][] matriz = new char [13][33];
+    
+    public char [][] llenar (char [][] matriz) {
+        char [][] temp = matriz;
+        for (int i = 0; i < matriz.length; i++){
+            for (int j = 0; j < matriz[i].length; j++) {
+                temp[i][j] = ' ';
+            }
+        }
+        return temp;
+    }
+    public String print (char [][] matriz) {
+        String temp = "";
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++){
+                temp += matriz[i][j];
+            }
+        }
+        return temp;
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFormattedTextField Comandos;
     private javax.swing.JButton ElDeseo;
